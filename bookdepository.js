@@ -5,7 +5,7 @@ function handleSuccessfulResponse(titleElement, jsonResponse) {
 	var ratings = jsonResponse.books[0].ratings_count;
 	var averageRating = jsonResponse.books[0].average_rating;
 
-	titleElement	
+	alert("average rating: " + averageRating + " (" + ratings + " ratings)");	
 }
 
 function getRatings(titleElement, isbn) {
