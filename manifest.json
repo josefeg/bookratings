@@ -1,0 +1,26 @@
+{
+	"manifest_version": 2,
+
+	"name": "Book Ratings",
+	"description": "Displays the ratings of the book on goodreads.com when look at books on The Book Depository and Amazon sites.",
+	"version": "1.0",
+
+	"permissions": [
+		"http://www.goodreads.com/"
+	],
+	"page_action": {
+	},
+	"content_scripts": [
+		{
+			"matches": [
+				"http://*.bookdepository.com/*",
+				"https://*.bookdepository.com/*",
+				"http://*.bookdepository.co.uk/*",
+				"https://*.bookdepository.co.uk/*"
+			], 
+			"js": [ "bookdepository.js" ],
+			"run_at": "document_idle",
+			"all_frames": false
+		}
+	]
+}
