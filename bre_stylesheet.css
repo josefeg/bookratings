@@ -1,0 +1,31 @@
+.bre_tooltip {
+	position: relative;
+}
+
+.bre_tooltip span {
+	
+	display: none; 
+
+	color: #333;
+	font-family: Verdana;
+	font-size: 10px;
+	font-weight: normal;
+
+	padding: 5px; 
+	width: 150px;
+	
+	background: #ffffff; 
+	
+	border: 1px solid #e4e4e4;
+	border-radius: 5px 5px; 
+	box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.1); 
+	
+	position: absolute; 
+	left: 50%;
+
+	z-index: 99;
+}
+
+.bre_tooltip:hover span	{
+	display: block; 
+}
