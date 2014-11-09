@@ -41,7 +41,7 @@ function addPopup(element, isbn, jsonResponse) {
 	tooltip.innerHTML += "&nbsp;" + averageRating + " (" + ratings + " ratings)<br/>";
 	tooltip.innerHTML += "<a href='" + REVIEWS_URL + isbn + "' target='_blank'>" + reviews + " reviews</a>";
 
-	var parent = element.parentNode.parentNode;
+	var parent = element.parentNode;
 	parent.appendChild(tooltip);
 	parent.setAttribute("class", "bre_tooltip");
 
@@ -67,8 +67,8 @@ function getRatings(titleElement, isbn) {
 	xhr.send();
 }
 
-var titleElement = document.querySelector("span[property='dc:title']");  
-var isbnElement = document.querySelector("span.isbn13 > span");
+var titleElement = document.querySelector('[property="dc:title"]');  
+var isbnElement = document.querySelector('[property="dc:identifier"]');
 
 if ((titleElement != null) && (isbnElement != null)) {
 
